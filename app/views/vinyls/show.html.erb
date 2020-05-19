@@ -1,21 +1,23 @@
-<div class="container mt-5">
-
-<h2><%= @vinyl.title %></h2>
-<p><%= @vinyl.artist %></p>
-<p><%= @vinyl.release_date %></p>
-<p><%= @vinyl.address %></p>
-
+<div class="album-card">
+  <div class="album-card-cover" style="background-image: url('https://images.genius.com/0327e4a856f14b2430e6e1a9333b1f1f.1000x1000x1.jpg')">
+  </div>
+  <div class="album-card-details">
+    <div class="album-info-container">
+      <div class="album-title-container">
+        <h2><%= @vinyl.title %></h2>
+        <h3><%= @vinyl.artist %></h3>
+        <h4><%= @vinyl.release_date %></h4>
+      </div>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente ipsa, hic obcaecati est repellendus dolorem a culpa.</p>
+      <hr>
+      <%= simple_form_for [ @vinyl, @booking] do |f| %>
+        <%= f.input :date_begin %>
+        <%= f.input :date_end %>
+        <%= f.submit %>
+      <% end %>
+      <a class="button first full-width" href="#">Book now</a>
+    </div>
+  </div>
+</div>
 
 <%= link_to 'Back to all vinyls', vinyls_path %>
-<br>
-<br>
-<h3>Book this vinyl:</h3>
-<div class="row">
-  <%= simple_form_for [ @vinyl, @booking] do |f| %>
-    <%= f.input :date_begin %>
-    <%= f.input :date_end %>
-    <%= f.submit %>
-  <% end %>
-</div>
-</div>
-
