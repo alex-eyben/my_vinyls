@@ -1,11 +1,20 @@
 class BookingsController < ApplicationController
-  def new
-    @booking = Booking.new
-  end
+  # def new
+  #   @vinyl = Vinyl.find(params[:vinyl_id])
+  #   @booking = Booking.new
+  # end
 
   def create
     @booking = Booking.new(booking_params)
-    @booking.save
+    @vinyl = Vinyl.find(params[:vinyl_id])
+    @booking.vinyl = @vinyl
+    @booking.user = current_user
+    if @booking.save
+      flash[:notice] = "Your booking is registered"
+      redirect_to vinyl_path(@vinyl)
+    else
+      render "vinyls/show"
+    end
   end
 
   private
