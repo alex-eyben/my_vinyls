@@ -30,7 +30,7 @@ search['results'].each do |result|
   artist_title = result['title'].split('-').map(&:strip)
   # Cover image is here : result["cover_image"]
   # also a smaller one here : result["thumb"]
-  vinyl = Vinyl.new(title: artist_title[1], artist: artist_title[0], release_date: result["year"].to_i, address: ["London", "Paris", "New-York", "Berlin", "Osaka", "Dakar"].sample, user: users.sample)
+  vinyl = Vinyl.new(title: artist_title[1], artist: artist_title[0], release_date: result["year"].to_i, address: result["country"], user: users.sample)
   vinyl.save
   puts "Created #{vinyl.title}"
 end
