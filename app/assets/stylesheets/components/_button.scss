@@ -1,0 +1,24 @@
+.button {
+  padding: 10px 15px;
+  border-radius: 2px;
+  transition: 0.3s;
+  color: white
+}
+
+.button:hover {
+  text-decoration: none;
+  opacity: 0.8;
+  color: white
+}
+
+.button.first {
+  background-color: $first;
+}
+
+.button.secondary {
+  background-color: $secondary;
+}
+
+.button.danger {
+  background-color: $danger;
+}
