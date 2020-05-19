@@ -1,0 +1,46 @@
+.form-container {
+  display: flex;
+  margin: 40px;
+  text-align: start;
+  background-color: white;
+  width: 400px;
+  padding: 0px 20px 20px 20px;
+}
+
+input {
+    width: 100%;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid;
+    padding: 0em 0 .1em;
+    font-size: 14px;
+    font-family: inherit;
+    font-weight: 100;
+    line-height: 1.5;
+    color: inherit;
+    outline: none;
+    &::placeholder { 
+        color: hsla(0, 0%, 100%, 0.5);
+    }
+}
+
+.form-container label {
+  font-size: 16px;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+
+.form-container input {
+  width: 100%;
+  border-radius: 2px;
+  color: $gray;
+  background-color: transparent;
+  transition: 0.2s;
+  padding: 10px;
+}
+
+#submit {
+  border-bottom: 0px;
+  margin-top: 20px;
+  color: white;
+}
