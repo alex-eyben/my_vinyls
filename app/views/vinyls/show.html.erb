@@ -1,5 +1,22 @@
+<div class="container mt-5">
+
 <h2><%= @vinyl.title %></h2>
 <p><%= @vinyl.artist %></p>
 <p><%= @vinyl.release_date %></p>
 <p><%= @vinyl.address %></p>
 <%= cl_image_tag @vinyl.photo.key, height: 300, width: 400, crop: :fill %>
+
+
+<%= link_to 'Back to all vinyls', vinyls_path %>
+<br>
+<br>
+<h3>Book this vinyl:</h3>
+<div class="row">
+  <%= simple_form_for [ @vinyl, @booking] do |f| %>
+    <%= f.input :date_begin %>
+    <%= f.input :date_end %>
+    <%= f.submit %>
+  <% end %>
+</div>
+</div>
+
