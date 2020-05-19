@@ -1,6 +1,10 @@
 class VinylsController < ApplicationController
   def index
-    @vinyls = Vinyls.all
+    @vinyls = Vinyl.all
+  end
+
+  def show
+    @vinyl = Vinyl.find(params[id])
   end
 
 end
