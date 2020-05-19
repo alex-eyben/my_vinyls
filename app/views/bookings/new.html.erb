@@ -1,0 +1,12 @@
+<div class="container mt-5">
+  <div class="row">
+    <h1>Book a vinyl</h1>
+  </div>
+  <div class="row">
+    <%= simple_form_for [ @vinyl, @booking ] do |f| %>
+      <%= f.input :date_begin %>
+      <%= f.input :date_end %>
+      <%= f.submit %>
+    <% end %>
+  </div>
+</div>

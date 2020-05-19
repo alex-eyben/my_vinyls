@@ -5,3 +5,22 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+puts "Cleaning database..."
+Vinyl.destroy_all
+User.destroy_all
+
+puts 'Creating users...'
+alex = User.create!(email: "alex@lewagon.org", password: "password")
+madeline = User.create!(email: "madeline@lewagon.org", password: "password")
+ugo = User.create!(email: "ugo@lewagon.org", password: "password")
+puts 'Finished creating users...'
+
+puts 'Creating vinyls...'
+beatles = { title: "Abbey Road", artist: "The Beatles", release_date: 1969, address: "London", user: alex }
+stones = { title: "Aftermath", artist: "The Rolling Stones", release_date: 1966, address: "Paris", user: alex }
+
+[ beatles, stones ].each do |attributes|
+  vinyl = Vinyl.create!(attributes)
+  puts "Created #{vinyl.title}"
+end
