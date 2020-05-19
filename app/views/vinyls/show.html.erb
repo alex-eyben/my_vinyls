@@ -4,7 +4,6 @@
 <p><%= @vinyl.artist %></p>
 <p><%= @vinyl.release_date %></p>
 <p><%= @vinyl.address %></p>
-<%= cl_image_tag @vinyl.photo.key, height: 300, width: 400, crop: :fill %>
 
 
 <%= link_to 'Back to all vinyls', vinyls_path %>
