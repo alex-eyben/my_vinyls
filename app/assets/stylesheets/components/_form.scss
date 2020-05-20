@@ -1,24 +1,33 @@
 .form-container {
   display: flex;
-  margin: 40px;
   text-align: start;
   background-color: white;
-  width: 400px;
+<<<<<<< HEAD
+  width: 100%;
   padding: 0px 20px 20px 20px;
+=======
+  justify-content: center;
+>>>>>>> master
 }
 
-input {
+form {
+  width: 100%;
+}
+
+.form-container input {
     width: 100%;
     background: transparent;
     border: 0;
     border-bottom: 1px solid;
-    padding: 0em 0 .1em;
+    border-radius: 2px;
+    padding: 10px;
     font-size: 14px;
     font-family: inherit;
     font-weight: 100;
     line-height: 1.5;
     color: inherit;
     outline: none;
+    transition: 0.2s;
     &::placeholder { 
         color: hsla(0, 0%, 100%, 0.5);
     }
@@ -30,17 +39,11 @@ input {
   margin-bottom: 0;
 }
 
-.form-container input {
-  width: 100%;
-  border-radius: 2px;
-  color: $gray;
-  background-color: transparent;
-  transition: 0.2s;
-  padding: 10px;
-}
-
 #submit {
   border-bottom: 0px;
   margin-top: 20px;
+  margin-bottom: 20px;
   color: white;
+  font-size: 16px;
+  font-weight: 600;
 }

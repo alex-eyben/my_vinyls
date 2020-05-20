@@ -1,7 +1,9 @@
 .album-card {
   display: flex;
-  width: 800px;
+  width: 100%;
   color: rgba($color: #000000, $alpha: 0.8);
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .album-card-cover {
@@ -15,11 +17,16 @@
 //   width: 100%;
   background-color: white;
   padding: 40px;
+  border: 3px solid $first;
 }
 
 .album-title-container {
   text-align: center;
   margin-bottom: 20px;
+}
+
+.album-info-container {
+  text-align: center;
 }
 
 .full-width {
@@ -73,6 +80,6 @@
 
 .cards {
   display: flex;
-  margin: 20px 0px;
+  margin: 50px 0px;
   flex-wrap: wrap;
 }
