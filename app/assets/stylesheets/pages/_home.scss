@@ -30,7 +30,7 @@ input {
     line-height: 1.5;
     color: inherit;
     outline: none;
-    &::placeholder { 
+    &::placeholder {
         color: hsla(0, 0%, 100%, 0.5);
     }
 }
