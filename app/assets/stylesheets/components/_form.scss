@@ -2,12 +2,7 @@
   display: flex;
   text-align: start;
   background-color: white;
-<<<<<<< HEAD
-  width: 100%;
-  padding: 0px 20px 20px 20px;
-=======
   justify-content: center;
->>>>>>> master
 }
 
 form {
@@ -28,7 +23,7 @@ form {
     color: inherit;
     outline: none;
     transition: 0.2s;
-    &::placeholder { 
+    &::placeholder {
         color: hsla(0, 0%, 100%, 0.5);
     }
 }
