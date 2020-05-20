@@ -21,17 +21,19 @@ puts 'Finished creating users...'
 
 puts 'Creating vinyls...'
 
-url = 'https://api.discogs.com/database/search?type=release&format=vinyl&key=siCtMCcmTNJxVlEjaFtN&secret=PpLOQJGJITIbrHqGVxhnVMnIMVTwnyRK'
+url = 'https://api.discogs.com/database/search?type=release&format=album&key=siCtMCcmTNJxVlEjaFtN&secret=PpLOQJGJITIbrHqGVxhnVMnIMVTwnyRK'
 
 search_serialized = open(url).read
 search = JSON.parse(search_serialized)
 users = [alex, madeline, ugo]
 
-search['results'].each do |result|
+search['results'].first(10).each do |result|
   artist_title = result['title'].split('-').map(&:strip)
+  cover = URI.open(result["cover_image"])
   # Cover image is here : result["cover_image"]
   # also a smaller one here : result["thumb"]
   vinyl = Vinyl.new(title: artist_title[1], artist: artist_title[0], release_date: result["year"].to_i, address: result["country"], user: users.sample)
+  vinyl.photo.attach(io: cover, filename: "#{artist_title}.jpeg", content_type: 'image/jpeg')
   vinyl.save
   puts "Created #{vinyl.title}"
 end
