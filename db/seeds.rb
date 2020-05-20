@@ -21,7 +21,7 @@ puts 'Finished creating users...'
 
 puts 'Creating vinyls...'
 
-url = 'https://api.discogs.com/database/search?type=release&format=album&key=siCtMCcmTNJxVlEjaFtN&secret=PpLOQJGJITIbrHqGVxhnVMnIMVTwnyRK'
+url = 'https://api.discogs.com/database/search?type=release&format=album&artist=mac%20miller&key=siCtMCcmTNJxVlEjaFtN&secret=PpLOQJGJITIbrHqGVxhnVMnIMVTwnyRK'
 
 search_serialized = open(url).read
 search = JSON.parse(search_serialized)
