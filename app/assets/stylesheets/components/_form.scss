@@ -1,10 +1,8 @@
 .form-container {
   display: flex;
-  margin: 40px;
   text-align: start;
   background-color: white;
-  width: 400px;
-  padding: 0px 20px 20px 20px;
+  justify-content: center;
 }
 
 .form-container input {
@@ -42,5 +40,8 @@
 #submit {
   border-bottom: 0px;
   margin-top: 20px;
+  margin-bottom: 20px;
   color: white;
+  font-size: 16px;
+  font-weight: 600;
 }
