@@ -2,8 +2,12 @@
   display: flex;
   text-align: start;
   background-color: white;
+<<<<<<< HEAD
   width: 100%;
   padding: 0px 20px 20px 20px;
+=======
+  justify-content: center;
+>>>>>>> master
 }
 
 form {
@@ -38,5 +42,8 @@ form {
 #submit {
   border-bottom: 0px;
   margin-top: 20px;
+  margin-bottom: 20px;
   color: white;
+  font-size: 16px;
+  font-weight: 600;
 }
