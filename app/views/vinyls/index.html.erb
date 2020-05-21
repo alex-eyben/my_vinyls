@@ -1,6 +1,6 @@
 <div class="my-container">
 
-  <div class="container">
+  <div class="container" id="index-container">
     <div class="row">
       <div class="col">
         <h1>Discover all our great vinyls and book your favourites!</h1>
@@ -9,13 +9,15 @@
 
       <div class="cards">
         <% @vinyls.each do |vinyl| %>
-          <div class="album-card-minimal">
-            <div class="album-card-minimal-cover" style="background-image: url('https://glide-media-cloud.s3-accelerate.amazonaws.com/2013/10/Queen-The-Miracle.jpg')"></div>
-            <div class="album-card-minimal-details">
-              <h4><%= link_to vinyl.title, vinyl_path(vinyl)%></h4>
-              <h4><%= vinyl.artist %></h4>
+          <%= link_to vinyl_path(vinyl) do %>
+            <div class="album-card-minimal">
+              <div class="album-card-minimal-cover" style="background-image: url('<%= cl_image_path vinyl.photo.key %>')"></div>
+              <div class="album-card-minimal-details">
+                <h4><%= vinyl.title %></h4>
+                <h4><%= vinyl.artist %></h4>
+              </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
       </div>
   </div>

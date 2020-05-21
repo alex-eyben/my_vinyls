@@ -3,8 +3,7 @@
     <div class="col">
 
     <div class="album-card">
-      <div class="album-card-cover" style="background-image: url('<%= cl_image_path @vinyl.photo.key %>')">
-      </div>
+      <%= cl_image_tag @vinyl.photo.key, crop: :fit %>
       <div class="album-card-details">
         <div class="album-info-container">
           <div class="album-title-container">
@@ -21,7 +20,7 @@
               <%= f.submit id: "submit", class:"submit button first", value: "Book now!"%>
             <% end %>
           </div>
-        <%= link_to 'Back to all vinyls', vinyls_path %> 
+        <%= link_to 'Back to all vinyls', vinyls_path %>
         </div>
       </div>
     </div>
