@@ -14,6 +14,8 @@
 
 .my-container h1 {
   margin-bottom: 20px;
+  font-size: 60px;
+  padding-bottom: 30px;
 }
 
 .my-container p {
@@ -57,20 +59,22 @@ li {
   text-decoration: none;
 }
 
-#btn-home-page{
-  background-color: $secondary;
-  padding: 15px;
-  border-radius: 2px;
-}
-#btn-home-page:hover{
-  background-color:#083e778e;
-}
+  #btn-home-page{
+    background-color: $secondary;
+    padding: 30px;
+    padding-top: 35px;
+    border-radius: 2px;
+  }
+  #btn-home-page:hover{
+    opacity: 0.9;
+  }
 
-#btn-home-page a {
-  color: hsla(0, 0%, 100%, 0.993);
-  
-}
-#btn-home-page a:hover{
-  color: hsla(0, 0%, 100%, 0.993);
-  text-decoration: none;
-}
+  #btn-home-page a {
+    color: hsla(0, 0%, 100%, 0.993);
+    font-size: 40px;
+    
+  }
+  #btn-home-page a:hover{
+    color: hsla(0, 0%, 100%, 0.993);
+    text-decoration: none;
+  }
