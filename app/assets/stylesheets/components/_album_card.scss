@@ -112,7 +112,30 @@
     }
 }
 
+.icon-options {
+  color: $first;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
 
+.icon-options .fa-trash-alt {
+  color: $danger;
+}
+
+.icon-options .fa-edit {
+  color: $first;
+}
+
+
+.far {
+  display: none;
+}
+
+.album-card-minimal:hover .far {
+  display: block;
+}
 
 
 

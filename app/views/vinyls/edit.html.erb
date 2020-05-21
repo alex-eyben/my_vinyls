@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col text-center">
 
-      <h2>What vinyl dou you want to rent?</h2>
+      <h2>Please update your vinyl info</h2>
 
       <div class="form-container">
 
@@ -10,8 +10,7 @@
         <%= f.input :title %>
         <%= f.input :artist %>
         <%= f.input :release_date %>
-        <%= f.input :address, id: "vinyl_address"%>
-        <%= f.input :photo, as: :file %>
+        <%= f.input :address, id:"vinyl_address" %>
         <%= f.submit class:"button first", id:"submit" %>
       <% end %>
       </div>
