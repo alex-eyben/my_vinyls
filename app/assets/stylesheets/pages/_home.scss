@@ -5,13 +5,11 @@
   
 }
 
-#structure-home-page{
-}
-
 #white-title{
   color: $light-gray;
   font-size: 60px;
 }
+
 
 #image-home-page{
   background-image: url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
@@ -29,6 +27,7 @@
 }
 
 
+
 ul {
   list-style: none;
   padding: 0;
@@ -38,7 +37,9 @@ ul {
 li {
   display: inline;
   margin-right: 50px;
+
   font-size: 35px;
+
   color: $light-gray;
   text-decoration: none;
 }
@@ -46,11 +47,13 @@ li {
   #btn-home-page{
     background-color: $secondary;
     padding: 30px;
+
     border-radius: 2px;
   }
   #btn-home-page:hover{
     opacity: 0.9;
   }
+
 
   #btn-home-page a{
     color: $light-gray;
@@ -62,3 +65,4 @@ li {
     color: $light-gray;
     text-decoration: none;
   }
+

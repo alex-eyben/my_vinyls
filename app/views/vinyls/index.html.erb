@@ -1,13 +1,30 @@
 <div class="my-container">
 
   <div class="container" id="index-container">
+
     <div class="row">
       <div class="col">
         <h1>Discover all our great vinyls and book your favourites!</h1>
+
+        <div class="search-box">
+          <div class="search-input">
+            <%= form_tag vinyls_path, method: :get do %>
+              <%= text_field_tag :query,
+                params[:query],
+                class: "form-control",
+                placeholder: "Find a vinyl"
+              %>
+          </div>
+          <div class="search-button">
+            <%= submit_tag "Search", class: "button secondary ml-10" %>
+            <% end %>
+          </div>
+        </div>
+
       </div>
     </div>
 
-      <div class="cards">
+      <div class="cards" id="cards-index">
         <% @vinyls.each do |vinyl| %>
           <%= link_to vinyl_path(vinyl) do %>
             <div class="album-card-minimal">
@@ -20,5 +37,6 @@
           <% end %>
         <% end %>
       </div>
+
   </div>
 </div>

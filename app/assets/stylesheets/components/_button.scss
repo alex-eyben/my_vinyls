@@ -22,3 +22,20 @@
 .button.danger {
   background-color: $danger;
 }
+
+#button-first-empty {
+  padding: 10px 15px;
+  border-radius: 2px;
+  border: 1px solid $first;
+  transition: 0.3s;
+  color: $first;
+  background-color: white;
+}
+
+#button-first-empty:hover {
+  background-color: $first;
+  text-decoration: none;
+  opacity: 0.8;
+  color: white;
+  text-decoration: none;
+}
