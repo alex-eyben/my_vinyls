@@ -6,5 +6,9 @@ class VinylsController < ApplicationController
   def show
     @vinyl = Vinyl.find(params[:id])
     @booking = Booking.new
+    @markers = [{
+      lat: @vinyl.latitude,
+      lng: @vinyl.longitude
+    }]
   end
 end
