@@ -1,33 +1,14 @@
-<div class="my-container">
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h1>What if there was a place where you could find all the vinyls you liked
-        as a teenager?</h1>
-        <ul>
-          <li>
-            <i class="fas fa-search"></i>
-            <%= link_to 'Browse all vinyls', vinyls_path %>
-          </li>
-          <li>
-            <i class="fas fa-bullseye"></i>
-            Find it
-          </li>
-          <li>
-            <i class="fas fa-user-friends"></i>
-            Meet with a lender
-          </li>
-        </ul>
-        <div class="col d-flex search-box">
-          <input class="mr-5" type="text" placeholder="Search..">
-          <a class="button first ml-10" href="#">search</a>
-        </div>
-      </div>
+<div id="image-home-page" class="my-container d-flex align-items-center">
+  <div class="container d-flex align-ims-center">
+    <div class="d-flex flex-column align-items-center"> 
+      <h1>What if there was a place where you could find all the vinyls you liked as a teenager?</h1>
+      <ul>
+        <li id="btn-home-page">
+          <%= link_to 'Browse all vinyls', vinyls_path%>
+        </li>
+      </ul>
     </div>
-
   </div>
-
 </div>
-
-
+ 
