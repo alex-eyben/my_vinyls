@@ -1,6 +1,10 @@
 class VinylsController < ApplicationController
   def index
-    @vinyls = Vinyl.all
+    if params[:query].present?
+      @vinyls = Vinyl.search_by_title_and_artist(params[:query])
+    else
+      @vinyls = Vinyl.all
+    end
   end
 
   def show
