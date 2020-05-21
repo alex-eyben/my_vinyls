@@ -11,7 +11,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
     if @booking.save
       flash[:notice] = "Your booking is registered"
-      redirect_to vinyl_path(@vinyl)
+      redirect_to dashboard_path(@user)
     else
       render "vinyls/show"
     end

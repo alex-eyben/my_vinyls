@@ -1,9 +1,28 @@
 <div class="my-container">
 
+  <div class="row">
+      <div class="col">
+          <h1>Here are all your bookings to come:</h1>
+      </div>
+      </div>
+
+      <div class="cards">
+          <% @bookings.each do |booking| %>
+          <div class="album-card-minimal">
+              <div class="album-card-minimal-cover" style="background-image: url('<%= cl_image_path booking.vinyl.photo.key %>')"></div>
+              <div class="album-card-minimal-details-dashboard">
+              <h4><%= link_to booking.vinyl.title, vinyl_path(booking.vinyl)%></h4>
+              <h4><%= booking.vinyl.artist %></h4>
+              <h6>From: <%= booking.date_begin.strftime("%d/%m/%Y") %><br>To: <%= booking.date_end.strftime("%d/%m/%Y") %></h6>
+              </div>
+          </div>
+          <% end %>
+      </div>
+
   <div class="container">
     <div class="row">
       <div class="col">
-        <h1>Here are all the vinyls you own</h1>
+        <h1>Here are all the vinyls you own:</h1>
       </div>
     </div>
 
@@ -18,25 +37,5 @@
           </div>
         <% end %>
       </div>
-
-        <div class="row">
-            <div class="col">
-                <h1>Here are all your bookings to come</h1>
-            </div>
-            </div>
-
-            <div class="cards">
-                <% @bookings.each do |booking| %>
-                <div class="album-card-minimal">
-                    <div class="album-card-minimal-cover" style="background-image: url('<%= cl_image_path booking.vinyl.photo.key %>')"></div>
-                    <div class="album-card-minimal-details-dashboard">
-                    <h4><%= link_to booking.vinyl.title, vinyl_path(booking.vinyl)%></h4>
-                    <h4><%= booking.vinyl.artist %></h4>
-                    <h4>From <%= booking.date_begin %> to <%= booking.date_end %> </h4>
-                    </div>
-                </div>
-                <% end %>
-            </div>
-
   </div>
 </div>
