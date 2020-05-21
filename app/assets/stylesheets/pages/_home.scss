@@ -1,11 +1,16 @@
-// Specific CSS for your home-page
 .my-container {
   margin-top: 40px;
   padding-top: 50px;
-  color: $light-gray;
   height: 100vh;
   
 }
+
+#white-title{
+  color: $light-gray;
+  font-size: 60px;
+}
+
+
 #image-home-page{
   background-image: url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
   background-size: cover;
@@ -14,7 +19,6 @@
 
 .my-container h1 {
   margin-bottom: 20px;
-  font-size: 60px;
   padding-bottom: 30px;
 }
 
@@ -22,21 +26,7 @@
   font-size: 20px;
 }
 
-input {
-    width: 100%;
-    background: transparent;
-    border: 0;
-    padding: 0em 0 .1em;
-    font-size: 16px;
-    font-family: inherit;
-    font-weight: 100;
-    line-height: 1.5;
-    color: inherit;
-    outline: none;
-    &::placeholder {
-        color: hsla(0, 0%, 100%, 0.5);
-    }
-}
+
 
 ul {
   list-style: none;
@@ -47,7 +37,9 @@ ul {
 li {
   display: inline;
   margin-right: 50px;
-  font-size: 20px;
+
+  font-size: 35px;
+
   color: $light-gray;
   text-decoration: none;
 }
@@ -55,19 +47,22 @@ li {
   #btn-home-page{
     background-color: $secondary;
     padding: 30px;
-    padding-top: 35px;
+
     border-radius: 2px;
   }
   #btn-home-page:hover{
     opacity: 0.9;
   }
 
-  #btn-home-page a {
-    color: hsla(0, 0%, 100%, 0.993);
-    font-size: 40px;
+
+  #btn-home-page a{
+    color: $light-gray;
+    font-size: 35px;
     
   }
+
   #btn-home-page a:hover{
-    color: hsla(0, 0%, 100%, 0.993);
+    color: $light-gray;
     text-decoration: none;
   }
+
