@@ -103,6 +103,13 @@
   margin: 50px 0px;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+#cards-index {
+  display: flex;
+  margin: 50px 0px;
+  flex-wrap: wrap;
+  justify-content: center;
 
   a {
     text-decoration: none;
@@ -136,9 +143,6 @@
 .album-card-minimal:hover .far {
   display: block;
 }
-
-
-
 
 
 
