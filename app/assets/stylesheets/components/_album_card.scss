@@ -103,6 +103,13 @@
   margin: 50px 0px;
   flex-wrap: wrap;
   justify-content: center;
+}
+
+#cards-index {
+  display: flex;
+  margin: 50px 0px;
+  flex-wrap: wrap;
+  justify-content: center;
 
   a {
     text-decoration: none;
@@ -111,9 +118,6 @@
       outline: 1.5px solid #F4D35E;
     }
 }
-
-
-
 
 
 
