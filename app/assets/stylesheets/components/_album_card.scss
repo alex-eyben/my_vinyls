@@ -110,7 +110,27 @@
     }
 }
 
+.icon-options {
+  color: $first;
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  
+}
 
+.far {
+  display: none;
+}
+
+.album-card-minimal:hover {
+  background-color:black;
+  opacity: 0.8;
+}
+
+.album-card-minimal:hover .far {
+  display: block;
+}
 
 
 

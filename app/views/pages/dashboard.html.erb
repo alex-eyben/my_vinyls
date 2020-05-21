@@ -10,7 +10,10 @@
       <div class="cards">
         <% @vinyls.each do |vinyl| %>
           <div class="album-card-minimal">
-            <div class="album-card-minimal-cover" style="background-image: url('<%= cl_image_path vinyl.photo.key %>')"></div>
+            <div class="album-card-minimal-cover icon-options" style="background-image: url('<%= cl_image_path vinyl.photo.key %>')">
+              <i class="far fa-edit"></i>
+              <i class="far fa-trash-alt"></i>
+            </div>
             <div class="album-card-minimal-details">
               <h4><%= link_to vinyl.title, vinyl_path(vinyl)%></h4>
               <h4><%= vinyl.artist %></h4>
