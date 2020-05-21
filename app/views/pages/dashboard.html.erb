@@ -32,7 +32,7 @@
                     <div class="album-card-minimal-details-dashboard">
                     <h4><%= link_to booking.vinyl.title, vinyl_path(booking.vinyl)%></h4>
                     <h4><%= booking.vinyl.artist %></h4>
-                    <h4>From <%= booking.date_begin %> to <%= booking.date_end %> </h4>
+                    <h4>From <%= booking.date_begin.strftime("%d/%m/%Y") %> to <%= booking.date_end.strftime("%d/%m/%Y") %> </h4>
                     </div>
                 </div>
                 <% end %>
