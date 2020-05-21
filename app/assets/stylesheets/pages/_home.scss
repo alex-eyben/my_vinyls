@@ -1,11 +1,21 @@
 // Specific CSS for your home-page
 .my-container {
   margin-top: 40px;
-  color: $gray;
+  padding-top: 50px;
+  color: $light-gray;
+  height: 100vh;
+  
+}
+#image-home-page{
+  background-image: url("https://images.unsplash.com/photo-1524368535928-5b5e00ddc76b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+  background-size: cover;
+  margin: 0px;
 }
 
 .my-container h1 {
   margin-bottom: 20px;
+  font-size: 60px;
+  padding-bottom: 30px;
 }
 
 .my-container p {
@@ -38,5 +48,26 @@ li {
   display: inline;
   margin-right: 50px;
   font-size: 20px;
-  color: rgba($color: #000000, $alpha: 0.5);
+  color: $light-gray;
+  text-decoration: none;
 }
+
+  #btn-home-page{
+    background-color: $secondary;
+    padding: 30px;
+    padding-top: 35px;
+    border-radius: 2px;
+  }
+  #btn-home-page:hover{
+    opacity: 0.9;
+  }
+
+  #btn-home-page a {
+    color: hsla(0, 0%, 100%, 0.993);
+    font-size: 40px;
+    
+  }
+  #btn-home-page a:hover{
+    color: hsla(0, 0%, 100%, 0.993);
+    text-decoration: none;
+  }
