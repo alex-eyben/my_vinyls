@@ -33,6 +33,12 @@ class VinylsController < ApplicationController
     redirect_to dashboard_path
   end
 
+  def destroy
+    @vinyl = Vinyl.find(params[:id])
+    @vinyl.destroy
+    redirect_to dashboard_path
+  end
+
   private
   
   def vinyl_params

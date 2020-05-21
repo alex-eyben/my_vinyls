@@ -116,16 +116,19 @@
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  
 }
+
+.icon-options .fa-trash-alt {
+  color: $danger;
+}
+
+.icon-options .fa-edit {
+  color: $first;
+}
+
 
 .far {
   display: none;
-}
-
-.album-card-minimal:hover {
-  background-color:black;
-  opacity: 0.8;
 }
 
 .album-card-minimal:hover .far {
