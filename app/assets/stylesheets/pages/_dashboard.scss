@@ -1,0 +1,43 @@
+.album-card-minimal-details-dashboard > h6 {
+  font-size: 14px;
+}
+
+#dashboard-title > h3 {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+#dashboard-title {
+  text-align: center;
+}
+
+.active-tab {
+  display:block;
+}
+
+.inactive-tab {
+  display:none;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 18px;
+
+}
+
+.tabs-selector-active {
+  border-bottom: 1px solid black;
+}
+
+.tabs-selector {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.tabs-selector:hover {
+  padding: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}

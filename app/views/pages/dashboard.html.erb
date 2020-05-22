@@ -1,42 +1,55 @@
 <div class="my-container">
 
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <h1>Here are all the vinyls you own</h1>
+    <div class="tabs">
+      <p class="tabs-selector tabs-selector-active">Bookings</p>
+      <p class="tabs-selector tabs-selector-inactive">Your vinyls</p>
+    </div>
+
+    <div class="active-tab">
+      <div class="row">
+          <div class="col" id="dashboard-title">
+              <h3>Here are all your bookings to come:</h3>
+          </div>
+      </div>
+      <div class="cards">
+          <% @bookings.each do |booking| %>
+          <div class="album-card-minimal">
+              <div class="album-card-minimal-cover" style="background-image: url('<%= cl_image_path booking.vinyl.photo.key %>')"></div>
+              <div class="album-card-minimal-details-dashboard">
+              <h4><strong><%= booking.vinyl.title %></strong></h4>
+              <h4><%= booking.vinyl.artist %></h4>
+              <h6>From: <%= booking.date_begin.strftime("%d/%m/%Y") %><br>To: <%= booking.date_end.strftime("%d/%m/%Y") %></h6>
+              </div>
+          </div>
+          <% end %>
       </div>
     </div>
+
+    <div class="inactive-tab">
+      <div class="row">
+        <div class="col" id="dashboard-title">
+          <h3>Here are all the vinyls you own:</h3>
+        </div>
+      </div>
 
       <div class="cards">
         <% @vinyls.each do |vinyl| %>
           <div class="album-card-minimal">
-            <div class="album-card-minimal-cover" style="background-image: url('<%= cl_image_path vinyl.photo.key %>')"></div>
+            <div class="album-card-minimal-cover icon-options" style="background-image: url('<%= cl_image_path vinyl.photo.key %>')">
+              <%= link_to edit_vinyl_path(vinyl) do %>
+                <i class="far fa-edit"></i>
+              <% end %>
+              <%= link_to vinyl_path(vinyl), method: "delete" do %>
+                <i class="far fa-trash-alt"></i>
+              <% end %>
+            </div>
             <div class="album-card-minimal-details">
-              <h4><%= link_to vinyl.title, vinyl_path(vinyl)%></h4>
+              <h4><strong><%= vinyl.title %></strong></h4>
               <h4><%= vinyl.artist %></h4>
+              <p class="price-card"><%= vinyl.price %>€ /day</p>
             </div>
           </div>
         <% end %>
       </div>
-
-        <div class="row">
-            <div class="col">
-                <h1>Here are all your bookings to come</h1>
-            </div>
-            </div>
-
-            <div class="cards">
-                <% @bookings.each do |booking| %>
-                <div class="album-card-minimal">
-                    <div class="album-card-minimal-cover" style="background-image: url('<%= cl_image_path booking.vinyl.photo.key %>')"></div>
-                    <div class="album-card-minimal-details-dashboard">
-                    <h4><%= link_to booking.vinyl.title, vinyl_path(booking.vinyl)%></h4>
-                    <h4><%= booking.vinyl.artist %></h4>
-                    <h4>From <%= booking.date_begin.strftime("%d/%m/%Y") %> to <%= booking.date_end.strftime("%d/%m/%Y") %> </h4>
-                    </div>
-                </div>
-                <% end %>
-            </div>
-
-  </div>
+    </div>
 </div>
