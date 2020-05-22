@@ -34,19 +34,19 @@ puts 'Creating vinyls...'
 users = [alex, madeline, ugo]
 prices = [15, 5, 10, 7, 2, 50]
 
-vinyl1 = Vinyl.new(title: "Thriller", artist: "Michael Jackson", release_date: 1982, address: "44 boulevard Voltaire, Paris", user: users.sample, price: prices.sample)
+vinyl1 = Vinyl.new(title: "Thriller", artist: "Michael Jackson", release_date: 1982, address: "44 boulevard Voltaire, Paris", user: ugo, price: prices.sample)
 cover1 = URI.open("https://images-na.ssl-images-amazon.com/images/I/91I7blJ8maL._SL1500_.jpg")
 vinyl1.photo.attach(io: cover1, filename: "#{vinyl1.title}.jpg", content_type: 'image/jpg')
 vinyl1.save
 puts "Created #{vinyl1.title}"
 
-vinyl2 = Vinyl.new(title: "Hotel California", artist: "The Eagles", release_date: 1983, address: "75 rue du Faubourg Saint-Martin, Paris", user: users.sample, price: prices.sample)
+vinyl2 = Vinyl.new(title: "Hotel California", artist: "The Eagles", release_date: 1983, address: "75 rue du Faubourg Saint-Martin, Paris", user: ugo, price: prices.sample)
 cover2 = URI.open("https://i.pinimg.com/originals/c6/aa/64/c6aa640236695afc1af5e85d61340476.jpg")
 vinyl2.photo.attach(io: cover2, filename: "#{vinyl2.title}.jpg", content_type: 'image/jpg')
 vinyl2.save
 puts "Created #{vinyl2.title}"
 
-vinyl3 = Vinyl.new(title: "Mothership", artist: "Led Zepplin", release_date: 1976, address: "3 rue de Rivoli, Paris", user: users.sample, price: prices.sample)
+vinyl3 = Vinyl.new(title: "Mothership", artist: "Led Zepplin", release_date: 1976, address: "3 rue de Rivoli, Paris", user: ugo, price: prices.sample)
 cover3 = URI.open("https://images-na.ssl-images-amazon.com/images/I/81g%2BSqwTwLL._SL1500_.jpg")
 vinyl3.photo.attach(io: cover3, filename: "#{vinyl3.title}.jpg", content_type: 'image/jpg')
 vinyl3.save
@@ -82,7 +82,7 @@ vinyl9.photo.attach(io: cover9, filename: "#{vinyl9.title}.jpg", content_type: '
 vinyl9.save
 puts "Created #{vinyl9.title}"
 
-vinyl10 = Vinyl.new(title: "Legend", artist: "Bob Marley", release_date: 1980, address: "40 rue du Caire, Paris", user: users.sample, price: prices.sample)
+vinyl10 = Vinyl.new(title: "Legend", artist: "Bob Marley", release_date: 1980, address: "40 rue du Caire, Paris", user: madeline, price: prices.sample)
 cover10 = URI.open("https://media.senscritique.com/media/000004841497/source_big/Legend_The_Best_of_Bob_Marley_and_The_Wailers_Compilation.jpg")
 vinyl10.photo.attach(io: cover10, filename: "#{vinyl10.title}.jpg", content_type: 'image/jpg')
 vinyl10.save
