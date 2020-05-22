@@ -14,7 +14,7 @@
       <div class="cards">
           <% @bookings.each do |booking| %>
           <div class="album-card-minimal">
-              <div class="album-card-minimal-cover" style="background-image: url('<%= cl_image_path vinyl.photo.key %>')"></div>
+              <div class="album-card-minimal-cover" style="background-image: url('<%= cl_image_path booking.vinyl.photo.key %>')"></div>
               <div class="album-card-minimal-details-dashboard">
               <h4><strong><%= booking.vinyl.title %></strong></h4>
               <h4><%= booking.vinyl.artist %></h4>
