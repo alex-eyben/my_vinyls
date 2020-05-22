@@ -1,8 +1,8 @@
 <div class="my-container">
 
     <div class="tabs">
-      <a href="#" class="tabs-selector tabs-selector-active">Bookings</a>
-      <a href="#" class="tabs-selector tabs-selector-inactive">Your vinyls</a>
+      <p class="tabs-selector tabs-selector-active">Bookings</p>
+      <p class="tabs-selector tabs-selector-inactive">Your vinyls</p>
     </div>
 
     <div class="active-tab">
@@ -14,7 +14,7 @@
       <div class="cards">
           <% @bookings.each do |booking| %>
           <div class="album-card-minimal">
-              <div class="album-card-minimal-cover" style="background-image: url('<%= cl_image_path booking.vinyl.photo.key %>')"></div>
+              <div class="album-card-minimal-cover"> <%= cl_image_tag booking.vinyl.photo.key, class:"album-card-minimal-cover" %> </div> 
               <div class="album-card-minimal-details-dashboard">
               <h4><%= booking.vinyl.title %></h4>
               <h4><%= booking.vinyl.artist %></h4>
