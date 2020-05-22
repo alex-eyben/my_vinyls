@@ -3,7 +3,6 @@ class ReviewsController < ApplicationController
     @review = Review.new(review_params)
     @vinyl = Vinyl.find(params[:vinyl_id])
     @review.vinyl = @vinyl
-    @review.user = current_user
     if @review.save
       redirect_to vinyl_path(@vinyl)
     else
