@@ -10,6 +10,7 @@ class VinylsController < ApplicationController
   def show
     @vinyl = Vinyl.find(params[:id])
     @booking = Booking.new
+    @review = Review.new
     @markers = [{
       lat: @vinyl.latitude,
       lng: @vinyl.longitude
@@ -34,7 +35,7 @@ class VinylsController < ApplicationController
   def edit
     @vinyl = Vinyl.find(params[:id])
   end
-  
+
   def update
     @vinyl = Vinyl.find(params[:id])
     @vinyl.update(vinyl_params)
@@ -48,7 +49,7 @@ class VinylsController < ApplicationController
   end
 
   private
-  
+
   def vinyl_params
     params.require(:vinyl).permit(:title, :artist, :release_date, :address, :photo)
   end
