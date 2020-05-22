@@ -25,17 +25,26 @@
       </div>
     </div>
 
-    <div class="bottom-container">
+    <div class="bottom-container mt-5">
+
         <div id="map" class="mb-5"
          style="width: 50%; height: 400px;"
          data-markers="<%= @markers.to_json %>"></div>
 
-        <div class="review">
-
-          <%= simple_form_for [ @vinyl, @review ] do |f| %>
-            <%= f.input :content %>
-            <%= f.submit "Submit review", class: "btn btn-primary" %>
-          <% end %>
+        <div class="reviews">
+          <% if @vinyl.reviews.blank? %>
+              <h5>Be the first to leave a review:</h5>
+            <% else %>
+              <% @vinyl.reviews.each do |review| %>
+                <p><%= review.content %></p>
+              <% end %>
+            <% end %>
+          <div class="form-container">
+            <%= simple_form_for [ @vinyl, @review ] do |f| %>
+              <%= f.input :content %>
+              <%= f.submit "Submit review" %>
+            <% end %>
+          </div>
         </div>
     </div>
 
