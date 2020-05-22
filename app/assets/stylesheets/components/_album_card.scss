@@ -78,7 +78,7 @@
 }
 
 .album-card-minimal-details {
-  padding: 10px;
+  padding: 15px;
   background-color: white;
   text-align: center;
   height: 100px;
@@ -86,8 +86,12 @@
   display: grid;
 }
 
+.price-card {
+  font-size: 13px !important;
+}
+
 .album-card-minimal-details-dashboard {
-  padding: 10px;
+  padding: 15px;
   background-color: white;
   text-align: center;
   align-items: center;

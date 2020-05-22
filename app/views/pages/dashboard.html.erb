@@ -14,9 +14,9 @@
       <div class="cards">
           <% @bookings.each do |booking| %>
           <div class="album-card-minimal">
-              <div class="album-card-minimal-cover"> <%= cl_image_tag booking.vinyl.photo.key, class:"album-card-minimal-cover" %> </div> 
+              <div class="album-card-minimal-cover" style="background-image: url('<%= cl_image_path booking.vinyl.photo.key %>')"></div>
               <div class="album-card-minimal-details-dashboard">
-              <h4><%= booking.vinyl.title %></h4>
+              <h4><strong><%= booking.vinyl.title %></strong></h4>
               <h4><%= booking.vinyl.artist %></h4>
               <h6>From: <%= booking.date_begin.strftime("%d/%m/%Y") %><br>To: <%= booking.date_end.strftime("%d/%m/%Y") %></h6>
               </div>
@@ -44,8 +44,9 @@
               <% end %>
             </div>
             <div class="album-card-minimal-details">
-              <h4><%= vinyl.title %></h4>
+              <h4><strong><%= vinyl.title %></strong></h4>
               <h4><%= vinyl.artist %></h4>
+              <p class="price-card"><%= vinyl.price %>€ /day</p>
             </div>
           </div>
         <% end %>

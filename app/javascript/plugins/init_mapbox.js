@@ -1,6 +1,6 @@
 import mapboxgl from 'mapbox-gl';
 
-const mapElement = document.getElementById('map');
+// const mapElement = document.getElementById('map');
 
 const buildMap = () => {
   mapboxgl.accessToken = "pk.eyJ1IjoidWdvY2FzIiwiYSI6ImNrOW81cmFkZzAyejAzbXA3aXVmZTV2dWMifQ.O7i7fcx3QvyNbeJvw6wM4A";
@@ -25,8 +25,8 @@ const fitMapToMarkers = (map, markers) => {
 };
 
 const initMapbox = () => {
-  const mapElement = document.getElementById('map');
-  if (mapElement) {
+  if (document.getElementById('map')) {
+    const mapElement = document.getElementById('map');
     const map = buildMap();
     const markers = JSON.parse(mapElement.dataset.markers);
     console.log(markers)

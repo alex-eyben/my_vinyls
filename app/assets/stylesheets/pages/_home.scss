@@ -9,7 +9,7 @@
 
 #home-title{
   color: white;
-  font-size: 60px;
+  font-size: 50px;
   text-align: center;
   font-weight: 400;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -19,7 +19,7 @@
   background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url("https://images.unsplash.com/photo-1582730147924-d92f4da00252?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1051&q=80");
   background-size: cover;
   margin: 0px;
-  height: 100vh;
+  height: calc(100vh - 90px - 80px);
 }
 
 .my-container h1 {
@@ -45,8 +45,8 @@ li {
 
 #btn-home-page{
   background-color: $secondary;
-  padding: 25px;
-  font-size: 30px;
+  padding: 18px;
+  font-size: 24px;
   border-radius: 2px;
 }
 #btn-home-page:hover{
@@ -57,7 +57,7 @@ li {
 #btn-home-page a{
   color: $light-gray;
   font-size: 35px;
-  
+
 }
 
 #btn-home-page a:hover{
