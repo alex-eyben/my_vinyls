@@ -76,7 +76,7 @@ vinyl8.photo.attach(io: cover8, filename: "#{vinyl8.title}.png", content_type: '
 vinyl8.save
 puts "Created #{vinyl8.title}"
 
-vinyl9 = Vinyl.new(title: "Appetite for Desctruction", artist: "Guns 'n Roses", release_date: 1985, address: "60 rue Amelot, Paris", user: users.sample, price: prices.sample)
+vinyl9 = Vinyl.new(title: "Appetite", artist: "Guns 'n Roses", release_date: 1985, address: "60 rue Amelot, Paris", user: users.sample, price: prices.sample)
 cover9 = URI.open("https://images-na.ssl-images-amazon.com/images/I/71H9ZR6EGFL._SL1400_.jpg")
 vinyl9.photo.attach(io: cover9, filename: "#{vinyl9.title}.jpg", content_type: 'image/jpg')
 vinyl9.save

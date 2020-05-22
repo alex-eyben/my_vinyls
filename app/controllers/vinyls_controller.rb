@@ -24,7 +24,7 @@ class VinylsController < ApplicationController
     @vinyl = Vinyl.new(vinyl_params)
     @vinyl.user = current_user
     if @vinyl.save
-      redirect_to dashboard_path
+      redirect_to vinyl_path(@vinyl)
     else
       render :new
     end
@@ -38,7 +38,7 @@ class VinylsController < ApplicationController
   def update
     @vinyl = Vinyl.find(params[:id])
     @vinyl.update(vinyl_params)
-    redirect_to dashboard_path
+    redirect_to vinyl_path(@vinyl)
   end
 
   def destroy
