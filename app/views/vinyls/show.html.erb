@@ -17,7 +17,7 @@
             <%= simple_form_for [ @vinyl, @booking] do |f| %>
               <%= f.input :date_begin %>
               <%= f.input :date_end %>
-              <%= f.submit id: "submit", class:"submit button first", value: "Book now!"%>
+              <%= f.submit id: "submit", class:"submit button first", value: "Book now for #{@vinyl.price}€ a day!"%>
             <% end %>
           </div>
         <%= link_to 'Back to all vinyls', vinyls_path %>
